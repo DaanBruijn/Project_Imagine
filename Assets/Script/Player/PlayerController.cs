@@ -104,19 +104,19 @@ public class PlayerController : MonoBehaviour
         {
             state = MovementState.sprinting;
             desiredMoveSpeed = sprintSpeed;
-            cam.DoFov(83f);
+            cam.DoFov(73f);
         }
         else if (grounded)
         {
             state = MovementState.walking;
             desiredMoveSpeed = walkSpeed;
-            cam.DoFov(80f);
+            cam.DoFov(70f);
         }
         else
         {
             state = MovementState.air;
             desiredMoveSpeed = sprintSpeed;
-            cam.DoFov(80f);
+            cam.DoFov(70f);
         }
 
         if (desiredMoveSpeed != lastDesiredMoveSpeed)
