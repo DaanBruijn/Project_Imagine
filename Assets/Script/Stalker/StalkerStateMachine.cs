@@ -1,6 +1,9 @@
 using UnityEngine;
-// - main state machine of the stalker
+// - compendium of states
 public class StalkerStateMachine 
 {
-    
+    public StalkerMainState stalkerRoamingState()
+    {
+        return new StalkerRoamingState();
+    }
 }
