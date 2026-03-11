@@ -43,6 +43,9 @@ public class DialogueUI : MonoBehaviour
     public void StartDialogue(List<string> dialogueLines)
     {
         Debug.Log("Starting Dialogue");
+
+        // - Set DialogueActive true in DialogueCameraController
+        DialogueCameraController.Instance.dialogueActive = true;
         
         // - Sets lines
         lines = dialogueLines;
@@ -72,6 +75,9 @@ public class DialogueUI : MonoBehaviour
     {
         // - End Dialogue and hide the Dialogue box
         dialoguePanel.SetActive(false);
+        
+        // - Set DialogueActive false in DialogueCameraController
+        DialogueCameraController.Instance.dialogueActive = false;
 
         // - Return Camera to Player
         DialogueCameraController.Instance.ReturnCamera();
