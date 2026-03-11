@@ -7558,8 +7558,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: WODPW
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0398a85a3315f0e44bd2ec54762fa201, type: 2}
+  m_sharedMaterial: {fileID: -5000357650788900265, guid: 0398a85a3315f0e44bd2ec54762fa201, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -48285,6 +48285,7 @@ MonoBehaviour:
   moveCameraScript: {fileID: 1178685916}
   playerControllerScript: {fileID: 1409924475}
   transitionSpeed: 5
+  dialogueActive: 0
 --- !u!1001 &1587170322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58928,8 +58929,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1-45B
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0398a85a3315f0e44bd2ec54762fa201, type: 2}
+  m_sharedMaterial: {fileID: -5000357650788900265, guid: 0398a85a3315f0e44bd2ec54762fa201, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -59697,9 +59698,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 658738168804682808, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: _xRotation
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704359672929808571, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: _xRotation
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010051537373679373, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cd14e660d94ca84b9fbef885684c347, type: 2}
     - target: {fileID: 7317408839812136103, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
       propertyPath: m_Name
       value: Stalker
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673374531188138906, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1301392
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673374531188138906, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673374531188138906, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.527
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673374531188138906, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673374531188138906, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673374531188138906, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673374531188138906, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673374531188138906, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482212385009864831, guid: 463728dd6aecc344eab35445bd1ee0c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

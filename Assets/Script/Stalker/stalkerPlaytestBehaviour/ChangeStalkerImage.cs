@@ -22,7 +22,7 @@ public class ChangeStalkerImage : MonoBehaviour
            _chaseState.SetActive(true);
             _normalState.SetActive(false);
         }
-        else if (_speed < _speedThreshold)
+        if (_speed < _speedThreshold)
         {
             _chaseState.SetActive(false);
             _normalState.SetActive(true);
