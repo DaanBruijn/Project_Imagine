@@ -19,6 +19,9 @@ public class DialogueCameraController : MonoBehaviour
     [Header("Transition Speed")]
     public float transitionSpeed = 5f;
 
+    [Header("Is Active")]
+    public bool dialogueActive = false;
+    
     // - Private
     Vector3 originalPosition;
     Quaternion originalRotation;
@@ -27,6 +30,7 @@ public class DialogueCameraController : MonoBehaviour
     Quaternion targetRotation;
 
     bool moving = false;
+    bool returningToPlayer = false;
 
     void Awake()
     {
@@ -58,6 +62,10 @@ public class DialogueCameraController : MonoBehaviour
             camHolder.position = targetPosition;
             camHolder.rotation = targetRotation;
             moving = false;
+            
+            // restore controls AFTER movement is done
+            if (returningToPlayer)
+                RestoreControlsInstant();
         }
     }
 
@@ -82,7 +90,7 @@ public class DialogueCameraController : MonoBehaviour
         targetPosition = anchor.position;
         targetRotation = anchor.rotation;
 
-        // - Sets moving to true when transition is active
+        // - Sets moving and return to true when transition is active
         moving = true;
     }
 
@@ -92,19 +100,18 @@ public class DialogueCameraController : MonoBehaviour
         targetPosition = originalPosition;
         targetRotation = originalRotation;
 
-        // - Sets moving to true when transition is active
+        // - Sets moving and return to true when transition is active
         moving = true;
-        
-        StartCoroutine(RestoreControls());
+        returningToPlayer = true;
     }
 
-    IEnumerator RestoreControls()
+    void RestoreControlsInstant()
     {
-        yield return new WaitForSeconds(0.4f);
-
-        // - Sets scripts back actie for PlayerControlls
+        // - Restore Controlls for Player
         playerCamScript.enabled = true;
         moveCameraScript.enabled = true;
         playerControllerScript.enabled = true;
+
+        returningToPlayer = false;
     }
 }

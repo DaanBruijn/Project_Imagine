@@ -42,6 +42,11 @@ public class PlayerCam : MonoBehaviour
 
     private void Update()
     {
+        // - Do nothing if Dialoue is active
+        if (DialogueCameraController.Instance != null && DialogueCameraController.Instance.dialogueActive)
+            return;
+
+        
         HandleCameraRotation();
         PlayerRaycast();
     }

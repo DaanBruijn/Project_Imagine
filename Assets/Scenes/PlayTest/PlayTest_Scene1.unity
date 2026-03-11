@@ -47726,6 +47726,7 @@ MonoBehaviour:
   moveCameraScript: {fileID: 1178685916}
   playerControllerScript: {fileID: 1409924475}
   transitionSpeed: 5
+  dialogueActive: 0
 --- !u!1 &1620756610
 GameObject:
   m_ObjectHideFlags: 0
@@ -60243,3 +60244,4 @@ SceneRoots:
   - {fileID: 984544403}
   - {fileID: 670831804}
   - {fileID: 2084985749}
+  - {fileID: 210416884}
