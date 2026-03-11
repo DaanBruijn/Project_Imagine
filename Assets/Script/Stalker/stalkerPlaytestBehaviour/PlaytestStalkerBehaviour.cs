@@ -45,6 +45,9 @@ public class PlaytestStalkerBehaviour : MonoBehaviour
             case _States.stalk:
                 StartCoroutine(Stalk());
                 break;
+            case _States.chase:
+                StartCoroutine(Chase());
+                break;
         }
     }
     public void DecreaseStalkDistance(float amount)
@@ -67,7 +70,24 @@ public class PlaytestStalkerBehaviour : MonoBehaviour
             _agent.SetDestination(_cameraTransform.position + (_cameraTransform.forward * -_stalkDistance));
             if (CheckIfInEyeDistance(transform.position))
             {
-                _agent.Warp(_cameraTransform.position + (new Vector3(_cameraTransform.forward.x,0,_cameraTransform.forward.z) * -_stalkDistance));
+                _agent.SetDestination(transform.position);
+            }
+            else if (CheckIfOnScreen(_cameraTransform.position))
+            {
+                _agent.SetDestination(transform.position);
+            }
+            yield return null;
+        }
+        yield break;
+    }
+    private IEnumerator Chase()
+    {
+        while (_state == _States.chase)
+        {
+            _agent.SetDestination(_cameraTransform.position + (_cameraTransform.forward * -_stalkDistance));
+            if (CheckIfInEyeDistance(transform.position))
+            {
+                _agent.Warp(_cameraTransform.position + (new Vector3(_cameraTransform.forward.x, 0, _cameraTransform.forward.z) * -_stalkDistance));
             }
             else if (CheckIfOnScreen(_cameraTransform.position))
             {
