@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using Unity.UI;
 using TMPro;
 
 // - Script for the PlayerCamera and Interactions with Objects/Npc's

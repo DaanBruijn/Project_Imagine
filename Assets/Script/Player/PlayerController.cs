@@ -21,14 +21,9 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed;
     public float sprintSpeed;
     public float groundDrag;
-
-    [Header("Jump")] 
-    public float jumpForce;
-    public float jumpCooldown;
     public float airMultiplier;
 
     [Header("Keybinds")] 
-    public KeyCode jumpkey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
 
     [Header("Ground Check")] 
@@ -48,8 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private float horizontalInput;
     private float verticalInput;
-
-    private bool readyToJump;
+    
     private bool keepMomentum;
 
     private Vector3 moveDirection;
@@ -60,9 +54,8 @@ public class PlayerController : MonoBehaviour
         // - set RB and CamFOV
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
-        readyToJump = true;
-        cam.DoFov(80f);
+        
+        cam.DoFov(70f);
     }
 
     private void Update()
@@ -88,13 +81,6 @@ public class PlayerController : MonoBehaviour
         // - Get input axis and handles jumpkey
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
-
-        if (Input.GetKey(jumpkey) && readyToJump && grounded)
-        {
-            readyToJump = false;
-            Jump();
-            Invoke(nameof(ResetJump), jumpCooldown);
-        }
     }
 
     private void StateHandler()
@@ -147,18 +133,5 @@ public class PlayerController : MonoBehaviour
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
         }
-    }
-
-    private void Jump()
-    {
-        // - Reset vertical velocity
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
-
-    private void ResetJump()
-    {
-        // - Allow jumping again
-        readyToJump = true;
     }
 }

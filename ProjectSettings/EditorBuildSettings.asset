@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayTest/PlayTest_Scene2.unity
     guid: 3b6af6426d5ae0148b45e6afe76438a2
   - enabled: 1
-    path: Assets/Scenes/PlayTest/PlayTest_EndScene.unity
-    guid: 1d6bffb95c5f1d24ea2f572ca7831545
-  - enabled: 1
     path: Assets/Scenes/PlayTest/PlayTest_MainMenu.unity
     guid: d56ea487843619e48b6e077f5fbf565a
   - enabled: 1
     path: Assets/Scenes/PlayTest/PlayTest_Scene1.unity
     guid: c0b7f0935efb3f84f8d8d2cf1ca3f59c
+  - enabled: 1
+    path: Assets/Scenes/PlayTest/PlayTest_EndScene.unity
+    guid: 1d6bffb95c5f1d24ea2f572ca7831545
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

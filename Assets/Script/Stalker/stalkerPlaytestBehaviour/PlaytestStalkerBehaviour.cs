@@ -124,4 +124,8 @@ public class PlaytestStalkerBehaviour : MonoBehaviour
         }
     }
 
+    public void IncreaseSpeed(float speedVariable)
+    {
+        _agent.speed += speedVariable;
+    }
 }
