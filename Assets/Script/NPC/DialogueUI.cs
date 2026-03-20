@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 
+
 // - Script for the Dialogue UI
 // - 
 // - Daniel Bruijn
@@ -19,6 +20,9 @@ public class DialogueUI : MonoBehaviour
     // - Private
     List<string> lines;
     int currentLine;
+    
+    // - Callback
+    System.Action onComplete;
 
     void Awake()
     {
@@ -40,9 +44,10 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    public void StartDialogue(List<string> dialogueLines)
+    public void StartDialogue(List<string> dialogueLines, System.Action onFinished)
     {
         Debug.Log("Starting Dialogue");
+        onComplete = onFinished;
 
         // - Set DialogueActive true in DialogueCameraController
         DialogueCameraController.Instance.dialogueActive = true;
@@ -79,7 +84,7 @@ public class DialogueUI : MonoBehaviour
         // - Set DialogueActive false in DialogueCameraController
         DialogueCameraController.Instance.dialogueActive = false;
 
-        // - Return Camera to Player
-        DialogueCameraController.Instance.ReturnCamera();
+        // - Invoke the onComplete
+        onComplete?.Invoke();
     }
 }
