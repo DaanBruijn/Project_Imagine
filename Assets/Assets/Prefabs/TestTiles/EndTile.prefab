@@ -155,6 +155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _connectionPoints: []
+  _furthestPoint: {fileID: 0}
+  _furthestPointMagnitude: 0
+  _endTile: 1
 --- !u!1 &2927366902412439322
 GameObject:
   m_ObjectHideFlags: 0

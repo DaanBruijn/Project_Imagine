@@ -152,10 +152,15 @@ MonoBehaviour:
   _tiles:
   - {fileID: 7986064323451344271, guid: de415058ff5326c4db00627a0d85e689, type: 3}
   - {fileID: 8012700294078315247, guid: 9e88f879bc30f44438954a7048892d9b, type: 3}
+  - {fileID: 7986064323451344271, guid: de415058ff5326c4db00627a0d85e689, type: 3}
+  - {fileID: 8012700294078315247, guid: 9e88f879bc30f44438954a7048892d9b, type: 3}
+  - {fileID: 7986064323451344271, guid: de415058ff5326c4db00627a0d85e689, type: 3}
   _endTiles:
   - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
   - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
-  _maxTileCount: 20
+  _maxTileCount: 90
+  _endTileLength: 1
+  spawnedTiles: []
 --- !u!4 &272980265
 Transform:
   m_ObjectHideFlags: 0
