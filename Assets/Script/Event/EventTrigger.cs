@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class InteractionTrigger : MonoBehaviour
+// - Script for handling the starting of the Events
+// - Daniel Bruijn
+
+public class EventTrigger : MonoBehaviour
 {
     // - Variables
     public NPCDialogue npc;

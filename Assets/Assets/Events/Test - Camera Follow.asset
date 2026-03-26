@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 489b9a5296160ec4abcff12f346b04ed, type: 3}
-  m_Name: Test - Dialogue
+  m_Script: {fileID: 11500000, guid: ca823c90d95cc334d9ab14edd061a1e6, type: 3}
+  m_Name: Test - Camera Follow
   m_EditorClassIdentifier: 
-  lines:
-  - You seem stressed
-  - ...
-  - Can I help you??
-  - I want to help you....
+  targetKey: Test - NPC 1 Target
+  duration: 4

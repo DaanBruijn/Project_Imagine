@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-// - Step for the Camera Focus for the Event System
+// - Step for the Camera Focus for focusing on the NPC
 // - Daniel Bruijn
 
 [CreateAssetMenu(menuName = "Events/Steps/Camera Focus")]

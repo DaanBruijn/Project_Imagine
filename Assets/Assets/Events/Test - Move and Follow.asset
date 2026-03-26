@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 489b9a5296160ec4abcff12f346b04ed, type: 3}
-  m_Name: Test - Dialogue
+  m_Script: {fileID: 11500000, guid: 07212cdf2d5d6c54c9ac4bb4ef605682, type: 3}
+  m_Name: Test - Move and Follow
   m_EditorClassIdentifier: 
-  lines:
-  - You seem stressed
-  - ...
-  - Can I help you??
-  - I want to help you....
+  steps:
+  - {fileID: 11400000, guid: 5647eef21fde24a488763e34dea98ac2, type: 2}
+  - {fileID: 11400000, guid: 2e3bea5fd4a67e846a1e99aa515402e3, type: 2}

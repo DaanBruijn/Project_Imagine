@@ -10,6 +10,9 @@ public class NPCDialogue : MonoBehaviour
     // - Varibales
     public EventSequence eventSequence;
     
+    [Header("Optional: Targets")]
+    public List<NamedTarget> targets;
+    
     // - Private
     private bool hasTriggered = false;
     
@@ -26,7 +29,21 @@ public class NPCDialogue : MonoBehaviour
             npc = transform
         };
         
+        // - Inject targets into context - If Selected
+        foreach (var t in targets)
+        {
+            context.targets[t.key] = t.target;
+        }
+
         EventRunner.Instance.StartEvent(eventSequence, context);
         hasTriggered = true;
     }
+}
+
+// - Small class for the Targets for CameraFocus
+[System.Serializable]
+public class NamedTarget
+{
+    public string key;
+    public Transform target;
 }
