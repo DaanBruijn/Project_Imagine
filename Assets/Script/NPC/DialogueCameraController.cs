@@ -25,12 +25,19 @@ public class DialogueCameraController : MonoBehaviour
     // - Private
     Vector3 originalPosition;
     Quaternion originalRotation;
+    bool hasStoredOriginal = false;
+    Vector3 lastPosition;
+    Quaternion lastRotation;
 
     Vector3 targetPosition;
     Quaternion targetRotation;
 
     bool moving = false;
     bool returningToPlayer = false;
+    
+    Transform followTarget;
+    bool following = false;
+    
 
     void Awake()
     {
@@ -39,6 +46,23 @@ public class DialogueCameraController : MonoBehaviour
 
     void Update()
     {
+        if (following && followTarget != null)
+        {
+            camHolder.position = Vector3.Lerp(
+                camHolder.position,
+                followTarget.position,
+                Time.deltaTime * transitionSpeed
+            );
+
+            camHolder.rotation = Quaternion.Lerp(
+                camHolder.rotation,
+                followTarget.rotation,
+                Time.deltaTime * transitionSpeed
+            );
+
+            return;
+        }
+        
         // - Camera moving return
         if (!moving) return;
 
@@ -59,6 +83,8 @@ public class DialogueCameraController : MonoBehaviour
         // - change the camera position and rotation
         if (Vector3.Distance(camHolder.position, targetPosition) < 0.01f)
         {
+            Debug.Log("Final Camera Pos BEFORE restore: " + camHolder.position);
+            
             camHolder.position = targetPosition;
             camHolder.rotation = targetRotation;
             moving = false;
@@ -75,10 +101,15 @@ public class DialogueCameraController : MonoBehaviour
         playerCamScript.enabled = false;
         moveCameraScript.enabled = false;
         playerControllerScript.enabled = false;
-
-        // - Sets the new positions
-        originalPosition = camHolder.position;
-        originalRotation = camHolder.rotation;
+        
+        if (!hasStoredOriginal)
+        {
+            // - Sets the new positions
+            originalPosition = camHolder.position;
+            originalRotation = camHolder.rotation;
+            hasStoredOriginal = true;
+            Debug.Log("Stored Original: " + originalPosition);
+        }
 
         // - Finds the Anchor Point for Camera Position
         Transform anchor = npc.Find("DialogueCameraAnchor_Obj");
@@ -96,9 +127,13 @@ public class DialogueCameraController : MonoBehaviour
 
     public void ReturnCamera()
     {
+        // - Stops the follwing for the Camera
+        StopFollowing();
+        
         // - Return to original position
         targetPosition = originalPosition;
         targetRotation = originalRotation;
+        Debug.Log("Returning To: " + originalPosition);
 
         // - Sets moving and return to true when transition is active
         moving = true;
@@ -113,5 +148,64 @@ public class DialogueCameraController : MonoBehaviour
         playerControllerScript.enabled = true;
 
         returningToPlayer = false;
+    }
+    
+    public void ResetCameraState()
+    {
+        hasStoredOriginal = false;
+    }
+    
+    void SaveCurrentAsLast()
+    {
+        lastPosition = camHolder.position;
+        lastRotation = camHolder.rotation;
+    }
+    
+    public void FocusOnTarget(Transform target)
+    {
+        SaveCurrentAsLast();
+        
+        // - Disables the PlayerCam,MoveCam and PlayerController scripts to fix fighting
+        playerCamScript.enabled = false;
+        moveCameraScript.enabled = false;
+        playerControllerScript.enabled = false;
+
+        if (!hasStoredOriginal)
+        {
+            // - Sets the new positions
+            originalPosition = camHolder.position;
+            originalRotation = camHolder.rotation;
+            hasStoredOriginal = true;
+            Debug.Log("Stored Original: " + originalPosition);
+        }
+        
+        // - Sets the new positions
+        targetPosition = target.position;
+        targetRotation = target.rotation;
+
+        moving = true;
+    }
+    
+    public void StartFollowing(Transform target)
+    {
+        // - Set the follow target
+        followTarget = target;
+        following = true;
+
+        // - Disables the PlayerCam,MoveCam and PlayerController scripts to fix fighting
+        playerCamScript.enabled = false;
+        moveCameraScript.enabled = false;
+        playerControllerScript.enabled = false;
+    }
+
+    public void StopFollowing()
+    {
+        // - Removes follow target
+        following = false;
+        followTarget = null;
+        
+        targetPosition = lastPosition;
+        targetRotation = lastRotation;
+        moving = true;
     }
 }

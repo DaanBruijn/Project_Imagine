@@ -8,29 +8,42 @@ using System.Collections.Generic;
 public class NPCDialogue : MonoBehaviour
 {
     // - Varibales
-    [Header("Dialogue")]
-    public List<string> dialogueLines = new List<string>();
-
-    [Header("Is Speaker")]
-    public bool isSpeaker = false;
+    public EventSequence eventSequence;
     
-    private bool hasSpokenToPlayer = false;
+    [Header("Optional: Targets")]
+    public List<NamedTarget> targets;
+    
+    // - Private
+    private bool hasTriggered = false;
     
     public void StartConversation()
     {
-        if (!hasSpokenToPlayer)
+        // - Check if the NPC has already spoken
+        if (hasTriggered) return;
+        if (eventSequence == null) return;
+
+        // - Set Event references
+        EventContext context = new EventContext
         {
-            // - Returns if the NPC is not a Speaker that run || Returns if the character has no lines || Returns if the player has already spoken to the npc
-            if (!isSpeaker) return;
-            if (dialogueLines.Count == 0) return;
-            if (hasSpokenToPlayer) return;
-
-            // - Starts Dialogue
-            DialogueUI.Instance.StartDialogue(dialogueLines);
-
-            DialogueCameraController.Instance.FocusOnNPC(transform);
-            hasSpokenToPlayer = true;
-        }
+            player = GameObject.FindWithTag("Player"),
+            npc = transform
+        };
         
+        // - Inject targets into context - If Selected
+        foreach (var t in targets)
+        {
+            context.targets[t.key] = t.target;
+        }
+
+        EventRunner.Instance.StartEvent(eventSequence, context);
+        hasTriggered = true;
     }
+}
+
+// - Small class for the Targets for CameraFocus
+[System.Serializable]
+public class NamedTarget
+{
+    public string key;
+    public Transform target;
 }
