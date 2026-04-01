@@ -15,6 +15,11 @@ public class PlayerStats : MonoBehaviour
         // - Makes sure that Stress is 0 at the start.
         stress = 0f;
     }
+
+    void Update()
+    {
+        MaxStressReached();
+    }
     
     public void AddStress(float amount)
     {
@@ -31,5 +36,13 @@ public class PlayerStats : MonoBehaviour
     {
         stress -= amount;
         stress = Mathf.Clamp(stress, 0, maxStress);
+    }
+
+    public void MaxStressReached()
+    {
+        if (stress >= maxStress)
+        {
+            Debug.Log("MaxStressReached - No event yet");
+        }
     }
 }
