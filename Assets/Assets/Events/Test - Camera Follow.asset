@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Test - Camera Follow
   m_EditorClassIdentifier: 
   targetKey: Test - NPC 1 Target
-  duration: 4
+  duration: 7

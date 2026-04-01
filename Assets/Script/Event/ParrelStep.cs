@@ -19,11 +19,10 @@ public class ParallelStep : EventStep
         {
             running.Add(EventRunner.Instance.StartCoroutine(step.Execute(context)));
         }
-
-        // - Wait until steps  are done
-        foreach (var step in steps)
+        
+        foreach (var coroutine in running)
         {
-            yield return step.Execute(context);
+            yield return coroutine;
         }
     }
 }

@@ -26,6 +26,8 @@ public class DialogueCameraController : MonoBehaviour
     Vector3 originalPosition;
     Quaternion originalRotation;
     bool hasStoredOriginal = false;
+    Vector3 lastPosition;
+    Quaternion lastRotation;
 
     Vector3 targetPosition;
     Quaternion targetRotation;
@@ -146,11 +148,23 @@ public class DialogueCameraController : MonoBehaviour
         playerControllerScript.enabled = true;
 
         returningToPlayer = false;
+    }
+    
+    public void ResetCameraState()
+    {
         hasStoredOriginal = false;
+    }
+    
+    void SaveCurrentAsLast()
+    {
+        lastPosition = camHolder.position;
+        lastRotation = camHolder.rotation;
     }
     
     public void FocusOnTarget(Transform target)
     {
+        SaveCurrentAsLast();
+        
         // - Disables the PlayerCam,MoveCam and PlayerController scripts to fix fighting
         playerCamScript.enabled = false;
         moveCameraScript.enabled = false;
@@ -189,5 +203,9 @@ public class DialogueCameraController : MonoBehaviour
         // - Removes follow target
         following = false;
         followTarget = null;
+        
+        targetPosition = lastPosition;
+        targetRotation = lastRotation;
+        moving = true;
     }
 }

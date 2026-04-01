@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb522296a6646d499ac28c2f5756167, type: 3}
-  m_Name: Test - MoveTarget
+  m_Script: {fileID: 11500000, guid: c0105fcf8e953aa49a21ace8b714afc5, type: 3}
+  m_Name: Test - AudioPlay
   m_EditorClassIdentifier: 
-  targetKey: Test - NPC 1 Move
-  destinationKey: Test - NPC 1 Destination
-  duration: 7
+  clip: {fileID: 8300000, guid: 103bf539fc773e14bb0fd3e5f74565c5, type: 3}
+  volume: 1
+  waitUntilFinished: 1
