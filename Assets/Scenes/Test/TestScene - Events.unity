@@ -7391,6 +7391,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 984544403}
     m_Modifications:
+    - target: {fileID: 1225685757840200900, guid: 7415cf1d15b03b34e9257a1ee57afe32, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2333447582119185751, guid: 7415cf1d15b03b34e9257a1ee57afe32, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -7398,6 +7402,10 @@ PrefabInstance:
     - target: {fileID: 3409777384935602911, guid: 7415cf1d15b03b34e9257a1ee57afe32, type: 3}
       propertyPath: m_Name
       value: Test - NPC 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596449704682616604, guid: 7415cf1d15b03b34e9257a1ee57afe32, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4596449704682616604, guid: 7415cf1d15b03b34e9257a1ee57afe32, type: 3}
       propertyPath: eventSequence
@@ -35710,6 +35718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f22bf9ca2fc5847b188c5ed101be03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeNPCCount: 1
 --- !u!1 &675040513
 GameObject:
   m_ObjectHideFlags: 0
@@ -36379,9 +36388,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 984544403}
     m_Modifications:
+    - target: {fileID: 1225685757840200900, guid: 7415cf1d15b03b34e9257a1ee57afe32, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3409777384935602911, guid: 7415cf1d15b03b34e9257a1ee57afe32, type: 3}
       propertyPath: m_Name
       value: Test - NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596449704682616604, guid: 7415cf1d15b03b34e9257a1ee57afe32, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5479033965308055099, guid: 7415cf1d15b03b34e9257a1ee57afe32, type: 3}
       propertyPath: m_LocalPosition.x
