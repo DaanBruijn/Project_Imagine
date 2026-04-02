@@ -1207,8 +1207,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startTile: {fileID: 3404854209453379626, guid: eaf055bc3acc14049a23cb353bcda4e8, type: 3}
   _tiles:
-  - {fileID: 7986064323451344271, guid: de415058ff5326c4db00627a0d85e689, type: 3}
-  - {fileID: 8012700294078315247, guid: 9e88f879bc30f44438954a7048892d9b, type: 3}
+  - {fileID: 88537249643768257, guid: 9dddd612310ac514387a1c0dd6cdfa50, type: 3}
+  - {fileID: 5401698084052448250, guid: 71fb4866c0272fd48a76272d5ba49a11, type: 3}
+  - {fileID: 7712781561495687443, guid: db5e1f4f120956e4286392597dc64b39, type: 3}
+  - {fileID: 992153727640808935, guid: a1e8520f129726c41ad5e2cf113dbb62, type: 3}
+  - {fileID: 2156372441265262208, guid: c77d86a36cf71e8469e51093d38a94be, type: 3}
   _endTiles:
   - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
   - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
