@@ -12,23 +12,6 @@ public class StalkerTrigger : MonoBehaviour
         triggerCollider = GetComponent<Collider>();
     }
 
-    // Called by StalkerController to reset trigger
-    public void EnableTrigger()
-    {
-        if (triggerCollider != null)
-        {
-            triggerCollider.enabled = true;
-
-            // If player is already inside, immediately start event
-            Collider playerCol = GameObject.FindWithTag("Player")?.GetComponent<Collider>();
-            if (playerCol != null && triggerCollider.bounds.Intersects(playerCol.bounds))
-            {
-                stalkerController.StartConversation();
-                triggerCollider.enabled = false;
-            }
-        }
-    }
-
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;

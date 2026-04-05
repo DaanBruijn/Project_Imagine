@@ -109,7 +109,6 @@ public class StalkerController : MonoBehaviour
         Debug.Log("Found " + allLocations.Length + " locations.");
     }
 
-    // Called by trigger
     public void StartConversation()
     {
         EventSequence nextEvent = eventSequences
@@ -119,7 +118,7 @@ public class StalkerController : MonoBehaviour
 
         EventContext context = new EventContext
         {
-            player = GameObject.FindWithTag("Player"),
+            player = player.gameObject,
             npc = transform
         };
 
@@ -127,6 +126,8 @@ public class StalkerController : MonoBehaviour
         {
             context.targets[t.key] = t.target;
         }
+        
+        DialogueCameraController.Instance.FocusOnNPC(transform);
 
         EventRunner.Instance.StartEvent(nextEvent, context);
         triggeredEvents.Add(nextEvent);
