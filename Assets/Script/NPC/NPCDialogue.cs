@@ -14,9 +14,9 @@ public class NPCDialogue : MonoBehaviour
     public List<NamedTarget> targets;
     
     // - Private
-    private bool hasTriggered = false;
+    protected bool hasTriggered = false;
     
-    public void StartConversation()
+    public virtual void StartConversation()
     {
         // - Check if the NPC has already spoken
         if (hasTriggered) return;

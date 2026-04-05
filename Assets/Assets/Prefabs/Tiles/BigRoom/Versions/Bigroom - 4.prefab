@@ -1062,6 +1062,8 @@ Transform:
   - {fileID: 8935470537232763272}
   - {fileID: 5485317675089522646}
   - {fileID: 3053740786588115936}
+  - {fileID: 7504487276231846054}
+  - {fileID: 207121377677232970}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3561494702256897346
@@ -1095,7 +1097,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6087771358165109452, guid: 7d60ab8cb73f6d74a8110260fa3db9d1, type: 3}
+  - {fileID: 2100000, guid: e8209bb5bcb4bed488c0b9524cb376bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1359,6 +1361,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1565185979920515624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7504487276231846054}
+  - component: {fileID: 114411512245399154}
+  m_Layer: 0
+  m_Name: StalkerLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7504487276231846054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565185979920515624}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.056900013, y: 0.025, z: 0.1371}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.019999998}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487271782004962023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114411512245399154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565185979920515624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d61c909305b6664db10e9da1e811e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1587164431279089948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,6 +2048,7 @@ GameObject:
   - component: {fileID: 3436990646546736512}
   - component: {fileID: 4993829931489914136}
   - component: {fileID: 397753628704494020}
+  - component: {fileID: 3545734305256807739}
   m_Layer: 0
   m_Name: Toilet Stalls (1)
   m_TagString: Untagged
@@ -2077,6 +2124,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3545734305256807739
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883915412433620000}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4481961, y: 0.086282134, z: 0.02078091}
+  m_Center: {x: -0.22630902, y: 0.010393354, z: 0.00008840264}
 --- !u!1 &2121794115206933846
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,6 +2328,7 @@ GameObject:
   - component: {fileID: 3637417894223966822}
   - component: {fileID: 8597182212384367458}
   - component: {fileID: 1196728785514690096}
+  - component: {fileID: 4836254449456275778}
   m_Layer: 0
   m_Name: Toilet Stalls
   m_TagString: Untagged
@@ -2335,6 +2404,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4836254449456275778
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157289824828918296}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48085594, y: 0.086282134, z: 0.02078091}
+  m_Center: {x: -0.20997901, y: 0.010393354, z: 0.00008840264}
 --- !u!1 &2204141266191260124
 GameObject:
   m_ObjectHideFlags: 0
@@ -9491,6 +9581,7 @@ GameObject:
   - component: {fileID: 9042482294622234969}
   - component: {fileID: 3291416764839234156}
   - component: {fileID: 8333101773992992165}
+  - component: {fileID: 1769548736751747374}
   m_Layer: 0
   m_Name: Wasbak
   m_TagString: Untagged
@@ -9566,6 +9657,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1769548736751747374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486396561482119133}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9826457, y: 0.10491273, z: 0.28195038}
+  m_Center: {x: -0.3144702, y: -0.035544686, z: -0.13096036}
 --- !u!1 &7563625748371590971
 GameObject:
   m_ObjectHideFlags: 0
@@ -10194,6 +10306,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8247922988945680097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 207121377677232970}
+  - component: {fileID: 7743279990479248897}
+  m_Layer: 0
+  m_Name: StalkerLocation (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &207121377677232970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8247922988945680097}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.314, y: 0.025, z: 0.6414}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.019999998}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487271782004962023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7743279990479248897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8247922988945680097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d61c909305b6664db10e9da1e811e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8255913207222732781
 GameObject:
   m_ObjectHideFlags: 0
@@ -10291,6 +10447,7 @@ GameObject:
   - component: {fileID: 7258494543472777875}
   - component: {fileID: 3038281981090689277}
   - component: {fileID: 7233668163874048569}
+  - component: {fileID: 4302696271958958862}
   m_Layer: 0
   m_Name: Wasbak
   m_TagString: Untagged
@@ -10366,6 +10523,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4302696271958958862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372643374797863108}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9826457, y: 0.10491273, z: 0.28195038}
+  m_Center: {x: -0.3144702, y: -0.035544686, z: -0.13096036}
 --- !u!1 &8392942194678012847
 GameObject:
   m_ObjectHideFlags: 0
@@ -10377,6 +10555,7 @@ GameObject:
   - component: {fileID: 7117857777391324638}
   - component: {fileID: 480460599140480455}
   - component: {fileID: 6044184122695594352}
+  - component: {fileID: 7103590037383434055}
   m_Layer: 0
   m_Name: Toilet Stalls (2)
   m_TagString: Untagged
@@ -10452,6 +10631,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7103590037383434055
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8392942194678012847}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45402437, y: 0.086282134, z: 0.02078091}
+  m_Center: {x: -0.22339419, y: 0.010393354, z: 0.00008840264}
 --- !u!1 &8496410766495813689
 GameObject:
   m_ObjectHideFlags: 0
