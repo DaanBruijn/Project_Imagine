@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 
 // - Stalker controller using NPCDialogue system
-// - Daniel Bruijn (Refactored)
+// - Daniel Bruijn 
+
 public class StalkerController : MonoBehaviour
 {
+    // - Variables
     [Header("References")]
     public Transform player;
     public StalkerLocation[] allLocations;
@@ -16,13 +18,13 @@ public class StalkerController : MonoBehaviour
     public float relocateCooldown = 5f;
 
     [Header("Pose System")]
-    public Transform[] poses;
+    public GameObject[] poses;
 
     [Header("Events")]
     public List<EventSequence> eventSequences;
     public List<NamedTarget> targets;
 
-    // Private
+    // - Private
     private StalkerLocation currentLocation;
     private StalkerLocation lastLocation;
     private float lastRelocateTime;
@@ -35,7 +37,7 @@ public class StalkerController : MonoBehaviour
 
     void Start()
     {
-        // Disable trigger initially
+        // - Disable trigger initially
         if (eventTrigger != null)
             eventTrigger.enabled = false;
 
@@ -98,8 +100,11 @@ public class StalkerController : MonoBehaviour
     {
         if (poses.Length == 0) return;
         int index = Random.Range(0, poses.Length);
-        Transform pose = poses[index];
-        transform.rotation = pose.rotation;
+
+        for (int i = 0; i < poses.Length; i++)
+        {
+            poses[i].SetActive(i == index);
+        }
     }
 
     IEnumerator LocateAllPositions()
@@ -132,7 +137,7 @@ public class StalkerController : MonoBehaviour
         EventRunner.Instance.StartEvent(nextEvent, context);
         triggeredEvents.Add(nextEvent);
 
-        // Disable trigger after playing all events
+        // - Disable trigger after playing all events
         if (triggeredEvents.Count >= eventSequences.Count && eventTrigger != null)
         {
             eventTrigger.enabled = false;

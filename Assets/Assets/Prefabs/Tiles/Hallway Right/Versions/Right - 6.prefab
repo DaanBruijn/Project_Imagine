@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 662537595633422391}
   - component: {fileID: 2292450597565704058}
   m_Layer: 3
-  m_Name: Right - 3
+  m_Name: Right - 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: f85eeed27f688dc4384ef8b42a18bdea, type: 2}
+  m_Material: {fileID: 2100000, guid: 3a335f789f5eb9940bef0b006b2a512c, type: 2}
   m_DrawDistance: 40
   m_FadeScale: 1
   m_StartAngleFade: 180
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_DecalLayerMask: 1
   m_ScaleMode: 0
   m_Offset: {x: 0, y: 0, z: 0.5}
-  m_Size: {x: 5, y: 5, z: 1}
+  m_Size: {x: 2, y: 2, z: 1}
   m_FadeFactor: 1
 --- !u!1 &4765261482827032300
 GameObject:

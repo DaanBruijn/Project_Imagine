@@ -1,8 +1,12 @@
 using UnityEngine;
 
-// Works with StalkerController
+// - Works with StalkerController
+// - Trigger for all the stalker events
+// - Daniel Bruijn
+
 public class StalkerTrigger : MonoBehaviour
 {
+    // - Variables
     private StalkerController stalkerController;
     private Collider triggerCollider;
 
@@ -18,6 +22,6 @@ public class StalkerTrigger : MonoBehaviour
         stalkerController.StartConversation();
 
         if (triggerCollider != null)
-            triggerCollider.enabled = false; // temporarily disable until next teleport
+            triggerCollider.enabled = false;
     }
 }
