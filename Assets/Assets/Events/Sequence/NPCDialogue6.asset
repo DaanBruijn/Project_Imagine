@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e09df8ebaae744439d33b0e3ebbf008, type: 3}
+  m_Name: NPCDialogue6
+  m_EditorClassIdentifier: 
+  steps:
+  - {fileID: 11400000, guid: 4eb4090b59dae0a41b9d147404976092, type: 2}
+  - {fileID: 11400000, guid: 3a0bf2895686c99478f5cfd97fc9d424, type: 2}
+  - {fileID: 11400000, guid: 177e49d71801ebd41be5002c9e56f65c, type: 2}
+  - {fileID: 11400000, guid: 17784961b85c18e4b94faaab97048a02, type: 2}
+  - {fileID: 11400000, guid: 78ec74df642ce65409da4f8aaa72eb29, type: 2}
+  - {fileID: 11400000, guid: 294a417289c2de143acc35a8cf5121b5, type: 2}
+  - {fileID: 11400000, guid: cf2cfbf829465954e8c65089881f15b5, type: 2}
+  - {fileID: 11400000, guid: 9ef897694f03f984fac164c68c225963, type: 2}

@@ -17,7 +17,7 @@ public class MapManager : MonoBehaviour
 
 
 
-    private void Start()
+    private void Awake()
     {
         _generate = InputSystem.actions.FindAction("Attack");
         GenerateMap();

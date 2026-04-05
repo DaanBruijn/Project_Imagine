@@ -1206,16 +1206,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startTile: {fileID: 3404854209453379626, guid: eaf055bc3acc14049a23cb353bcda4e8, type: 3}
   _tiles:
-  - {fileID: 88537249643768257, guid: 9dddd612310ac514387a1c0dd6cdfa50, type: 3}
+  - {fileID: 6130866872935437619, guid: bfecf668c57ed5249ac7e45a67f37181, type: 3}
+  - {fileID: 3880777594350018367, guid: cec043a9bd7b9c24cb6abb89c57deaae, type: 3}
+  - {fileID: 975297283304876125, guid: 7e63e85dfa0a06d40b6454fd6478ece2, type: 3}
+  - {fileID: 975297283304876125, guid: 1cb70991a22a9d147be2da0a48ed46ee, type: 3}
   - {fileID: 5401698084052448250, guid: 71fb4866c0272fd48a76272d5ba49a11, type: 3}
-  - {fileID: 7712781561495687443, guid: db5e1f4f120956e4286392597dc64b39, type: 3}
-  - {fileID: 4585739020593490712, guid: 79f0b3d970f2d6c49886a7bf3574ac34, type: 3}
+  - {fileID: 5401698084052448250, guid: fe19dfa06d9ac994fa50d4da24759584, type: 3}
+  - {fileID: 5401698084052448250, guid: b1cf3f047acc8e545adab3276d433f78, type: 3}
+  - {fileID: 5401698084052448250, guid: ac730fa701ed60a458285ba476905c95, type: 3}
+  - {fileID: 88537249643768257, guid: 9dddd612310ac514387a1c0dd6cdfa50, type: 3}
+  - {fileID: 88537249643768257, guid: fce51ac03761f7b488d0e36d2823bb00, type: 3}
+  - {fileID: 88537249643768257, guid: bba8ddf74d361e34096561dfce631ef4, type: 3}
+  - {fileID: 88537249643768257, guid: 2b0fdb8d9a92a764391ee4be69012d75, type: 3}
   - {fileID: 992153727640808935, guid: a1e8520f129726c41ad5e2cf113dbb62, type: 3}
   - {fileID: 2156372441265262208, guid: c77d86a36cf71e8469e51093d38a94be, type: 3}
   _endTiles:
   - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
   - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
-  _maxTileCount: 50
+  _maxTileCount: 100
   _endTileLength: 0
   spawnedTiles: []
 --- !u!4 &1045877721
@@ -1949,7 +1957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f22bf9ca2fc5847b188c5ed101be03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeNPCCount: 1
+  activeNPCCount: 100
 --- !u!4 &1907374924
 Transform:
   m_ObjectHideFlags: 0

@@ -94,22 +94,20 @@ public class DialogueCameraController : MonoBehaviour
                 RestoreControlsInstant();
         }
     }
-
+    
     public void FocusOnNPC(Transform npc)
     {
         // - Disables the PlayerCam,MoveCam and PlayerController scripts to fix fighting
         playerCamScript.enabled = false;
         moveCameraScript.enabled = false;
         playerControllerScript.enabled = false;
-        
-        if (!hasStoredOriginal)
-        {
-            // - Sets the new positions
-            originalPosition = camHolder.position;
-            originalRotation = camHolder.rotation;
-            hasStoredOriginal = true;
-            Debug.Log("Stored Original: " + originalPosition);
-        }
+
+        // ALWAYS store current position
+        originalPosition = camHolder.position;
+        originalRotation = camHolder.rotation;
+        hasStoredOriginal = true;
+
+        Debug.Log("Stored Original: " + originalPosition);
 
         // - Finds the Anchor Point for Camera Position
         Transform anchor = npc.Find("DialogueCameraAnchor_Obj");
@@ -118,6 +116,7 @@ public class DialogueCameraController : MonoBehaviour
             Debug.LogError("CameraAnchor missing on NPC!");
             return;
         }
+
         targetPosition = anchor.position;
         targetRotation = anchor.rotation;
 
