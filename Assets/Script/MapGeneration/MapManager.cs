@@ -9,11 +9,13 @@ public class MapManager : MonoBehaviour
     [SerializeField] private GameObject _startTile;
     [SerializeField] private GameObject[] _tiles;
     [SerializeField] private GameObject[] _endTiles;
+    [SerializeField] private GameObject _finalTile;
     [SerializeField] private int _minTileCount;
     [SerializeField] private int _waveCount;
     [SerializeField] private float _endTileLength;
     public List<GameObject> spawnedTiles;
     public List<GameObject> currentWave;
+    private List<GameObject> _endingtiles;
     private int _currentTiles;
 
     private InputAction _generate;
@@ -22,6 +24,7 @@ public class MapManager : MonoBehaviour
 
     private void Awake()
     {
+        _endingtiles = new List<GameObject>();
         _generate = InputSystem.actions.FindAction("Attack");
         GenerateMapTwo();
         while (_currentTiles < _minTileCount)
@@ -32,6 +35,8 @@ public class MapManager : MonoBehaviour
                 Destroy(spawnedTiles[i]);
             }
             spawnedTiles.Clear();
+            _endingtiles.Clear();
+            currentWave.Clear();
             Debug.Log(spawnedTiles.Count);
             if (spawnedTiles.Count == 0)
             {
@@ -49,6 +54,8 @@ public class MapManager : MonoBehaviour
                 Destroy(spawnedTiles[i]);
             }
             spawnedTiles.Clear();
+            _endingtiles.Clear();
+            currentWave.Clear();
             Debug.Log(spawnedTiles.Count);
             if (spawnedTiles.Count == 0)
             {
@@ -104,6 +111,12 @@ public class MapManager : MonoBehaviour
         {
             AddGenerationWave();
         }
+        int endingTile = Random.Range(0, _endingtiles.Count);
+        GameObject final = Instantiate(_finalTile);
+        final.transform.position = _endingtiles[endingTile].gameObject.transform.position;
+        final.transform.rotation = _endingtiles[endingTile].gameObject.transform.rotation;
+        Destroy(_endingtiles[endingTile]);
+        spawnedTiles.Add(final);
 
     }
 
@@ -123,18 +136,13 @@ public class MapManager : MonoBehaviour
                 if (CheckIfInterSectCustom(subTile.GetComponent<BaseTile>(), currentWave[i].gameObject))
                 {
                     Destroy(subTile.gameObject);
-
-
-
-
-
-
                     GameObject endTile = Instantiate(_endTiles[Random.Range(0, _endTiles.Length)]);
                    endTile.transform.position = currentWave[i].GetComponent<BaseTile>().connectionPoints[j].position;
                     endTile.transform.rotation = currentWave[i].GetComponent<BaseTile>().connectionPoints[j].rotation;
                     endTile.transform.SetParent(currentWave[i].transform);
                     spawnedTiles.Add(endTile);
                     _currentTiles++;
+                    _endingtiles.Add(endTile);
                 }
                 else
                 {

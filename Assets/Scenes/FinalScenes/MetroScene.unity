@@ -1582,11 +1582,14 @@ MonoBehaviour:
   - {fileID: 992153727640808935, guid: 3446bd9d0c15e2c48a1adf0047f616ba, type: 3}
   - {fileID: 992153727640808935, guid: 714d2a1c37627724e80d12bfcf094b79, type: 3}
   _endTiles:
-  - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
-  - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
-  _maxTileCount: 100
+  - {fileID: 5249025798790868408, guid: ab6710d54a50b4d40a398e6599fdf31f, type: 3}
+  - {fileID: 5249025798790868408, guid: ab6710d54a50b4d40a398e6599fdf31f, type: 3}
+  _finalTile: {fileID: 1934875427113104006, guid: b60b45db1d0fc8e43ab1063d535bef2e, type: 3}
+  _minTileCount: 20
+  _waveCount: 50
   _endTileLength: 0
   spawnedTiles: []
+  currentWave: []
 --- !u!4 &1045877721
 Transform:
   m_ObjectHideFlags: 0

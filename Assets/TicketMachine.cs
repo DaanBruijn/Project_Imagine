@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class TicketMachine : MonoBehaviour
+public class TicketMachine : BaseObjectScript
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public bool workingMachine;
+    public static bool gotTicket;
 
-    // Update is called once per frame
-    void Update()
+    public override void ActivateObject()
     {
-        
+        if (workingMachine)
+        {
+            gotTicket = true;
+        }
     }
 }
