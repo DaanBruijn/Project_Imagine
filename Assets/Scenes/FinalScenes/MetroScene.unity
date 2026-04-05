@@ -778,6 +778,51 @@ Transform:
   - {fileID: 9072302254997062715}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &778979149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 778979151}
+  - component: {fileID: 778979150}
+  m_Layer: 0
+  m_Name: TicketManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &778979150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778979149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e726de509b6b0fe409f1cafa57b46814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allMachines: []
+--- !u!4 &778979151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778979149}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2190804, y: -2.6098716, z: 0.45493346}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &865960835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,9 +1629,11 @@ MonoBehaviour:
   _endTiles:
   - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
   - {fileID: 774410359101436620, guid: 21b2c21aa5ded5440a82f1611536e003, type: 3}
-  _maxTileCount: 100
+  _minTileCount: 90
+  _waveCount: 100
   _endTileLength: 0
   spawnedTiles: []
+  currentWave: []
 --- !u!4 &1045877721
 Transform:
   m_ObjectHideFlags: 0
@@ -8109,4 +8156,5 @@ SceneRoots:
   - {fileID: 299152387}
   - {fileID: 1045877721}
   - {fileID: 1907374924}
+  - {fileID: 778979151}
   - {fileID: 730913238}
