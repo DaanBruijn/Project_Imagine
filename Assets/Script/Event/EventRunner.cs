@@ -15,8 +15,8 @@ public class EventRunner : MonoBehaviour
     public int activeNPCCount;
 
     // - Private
-    private List<NPCDialogue> allNPCs = new List<NPCDialogue>();
-    private List<NPCDialogue> activeNPCs = new List<NPCDialogue>();
+    [SerializeField] private List<NPCDialogue> allNPCs = new List<NPCDialogue>();
+    [SerializeField] private List<NPCDialogue> activeNPCs = new List<NPCDialogue>();
 
     void Awake()
     {
@@ -25,10 +25,7 @@ public class EventRunner : MonoBehaviour
     
     void Start()
     {
-        NPCDialogue[] npcs = FindObjectsOfType<NPCDialogue>();
-        allNPCs.AddRange(npcs);
-
-        SelectRandomActiveNPCs();
+        StartCoroutine(FindNPCCO());
     }
 
     public void StartEvent(EventSequence sequence, EventContext context)
@@ -71,5 +68,14 @@ public class EventRunner : MonoBehaviour
                     box.enabled = false;
             }
         }
+    }
+
+    IEnumerator FindNPCCO()
+    {
+        yield return new WaitForSeconds(1.5f);
+        NPCDialogue[] npcs = FindObjectsOfType<NPCDialogue>();
+        allNPCs.AddRange(npcs);
+
+        SelectRandomActiveNPCs();
     }
 }

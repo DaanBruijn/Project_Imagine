@@ -6647,7 +6647,7 @@ GameObject:
   - component: {fileID: 1009964792686119492}
   - component: {fileID: 1418017405943451905}
   - component: {fileID: 8406165689026165896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TicketMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

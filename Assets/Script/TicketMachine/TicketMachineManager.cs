@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,14 +10,19 @@ public class TicketMachineManager : MonoBehaviour
     // - Variables
     public static TicketMachineManager Instance;
     public List<TicketMachine> allMachines = new List<TicketMachine>();
+    public List<TicketMachine> usedMachines = new List<TicketMachine>();
 
     // - Private
-    private List<TicketMachine> usedMachines = new List<TicketMachine>();
     private bool workingMachineChosen = false;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    void Start()
+    {
+        StartCoroutine(FindMachineCO());
     }
 
     public void RegisterUse(TicketMachine machine)
@@ -58,5 +64,11 @@ public class TicketMachineManager : MonoBehaviour
         TicketMachine chosen = availableMachines[Random.Range(0, availableMachines.Count)];
         chosen.isWorkingMachine = true;
         Debug.Log("Working machine selected: " + chosen.name);
+    }
+
+    IEnumerator FindMachineCO()
+    {
+        yield return new WaitForSeconds(1.5f);
+        allMachines = new List<TicketMachine>(FindObjectsByType<TicketMachine>(FindObjectsSortMode.None));
     }
 }
