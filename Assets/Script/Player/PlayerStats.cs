@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 // - Script for handling PlayerStat Data (Stress, Stamina, ETC.)
@@ -18,6 +19,7 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
+        stress += Time.deltaTime * 0.001f;
         MaxStressReached();
     }
     
@@ -42,7 +44,12 @@ public class PlayerStats : MonoBehaviour
     {
         if (stress >= maxStress)
         {
+            Camera.main.AddComponent<Rigidbody>();
+            Camera.main.transform.parent = Camera.main.transform;
+
             Debug.Log("MaxStressReached - No event yet");
         }
     }
+
+
 }
