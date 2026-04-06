@@ -76,9 +76,6 @@ public class PlayerCam : MonoBehaviour
             if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactionLayer))
             {
                 interactionText.gameObject.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Debug.Log(hit.collider.name);
                     if (hit.collider.gameObject.TryGetComponent<InterInteractable>(out InterInteractable interactable))
                     {
                         interactionText.text = interactable.GetInteractionText();
@@ -92,7 +89,6 @@ public class PlayerCam : MonoBehaviour
                     {
                         interactionText.gameObject.SetActive(false);
                     }
-                }
             }
             else
             {
