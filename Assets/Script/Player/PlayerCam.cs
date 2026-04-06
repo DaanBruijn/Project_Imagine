@@ -79,9 +79,18 @@ public class PlayerCam : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Debug.Log(hit.collider.name);
-                    if (hit.collider.gameObject.TryGetComponent<BaseObjectScript>(out BaseObjectScript script))
+                    if (hit.collider.gameObject.TryGetComponent<InterInteractable>(out InterInteractable interactable))
                     {
-                        script.ActivateObject();
+                        interactionText.text = interactable.GetInteractionText();
+
+                        if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            interactable.Interact();
+                        }
+                    }
+                    else
+                    {
+                        interactionText.gameObject.SetActive(false);
                     }
                 }
             }
