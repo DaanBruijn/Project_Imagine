@@ -15,16 +15,38 @@ public class MenuManager : MonoBehaviour
     public AudioSource audioSource;
     
     [Header("Image")]
-    public Image fadeImage;
+    public Image fadeImage = null;
     public float fadeDuration = 1f;
+
+    void Start()
+    {
+        StartCoroutine(FadeInCO());
+    }
     
     public void LoadScene(string sceneName)
     {
         Debug.Log("Loading scene: " + sceneName);
-        StartCoroutine(FadeAndLoad(sceneName));
+        StartCoroutine(FadeAndLoadCO(sceneName));
     }
 
-    IEnumerator FadeAndLoad(string sceneName)
+    IEnumerator FadeInCO()
+    {
+        float time = 0f;
+        Color color = fadeImage.color;
+
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            color.a = Mathf.Lerp(1, 0, time / fadeDuration);
+            fadeImage.color = color;
+            yield return null;
+        }
+        
+        color.a = 0;
+        fadeImage.color = color;
+    }
+
+    IEnumerator FadeAndLoadCO(string sceneName)
     {
         float time = 0f;
         Color color = fadeImage.color;

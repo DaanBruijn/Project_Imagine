@@ -279,7 +279,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &11091616
 GameObject:
@@ -566,7 +566,7 @@ MonoBehaviour:
   audioClips: []
   audioSource: {fileID: 0}
   fadeImage: {fileID: 533208810}
-  fadeDuration: 1
+  fadeDuration: 2
 --- !u!1 &186501170
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips: []
   audioSource: {fileID: 0}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &289419861
 GameObject:
@@ -980,7 +980,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &480933210
 GameObject:
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &507841857
 GameObject:
@@ -1304,7 +1304,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &520660522
 GameObject:
@@ -1466,7 +1466,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &533208808
 GameObject:
@@ -1518,7 +1518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1791,7 +1791,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &1134678335
 GameObject:
@@ -2460,7 +2460,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &1321526176
 GameObject:
@@ -2839,7 +2839,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &1804778797
 GameObject:
@@ -3001,7 +3001,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &2005066549
 GameObject:
@@ -3163,7 +3163,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &2037318782
 GameObject:
@@ -3325,7 +3325,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1 &2107554272
 GameObject:
@@ -3616,7 +3616,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07c2fc6e0a800f044a28530a192637fc, type: 3}
   - {fileID: 8300000, guid: 205f54226617ddc40a0302f8495d1356, type: 3}
   audioSource: {fileID: 1213981667}
-  fadeImage: {fileID: 0}
+  fadeImage: {fileID: 533208810}
   fadeDuration: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
