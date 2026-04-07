@@ -718,7 +718,7 @@ RectTransform:
   m_GameObject: {fileID: 398300657}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.94305, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 370941015}
@@ -726,7 +726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34, y: 5}
+  m_AnchoredPosition: {x: -39.8, y: 5}
   m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &398300659
@@ -2710,7 +2710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f22bf9ca2fc5847b188c5ed101be03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeNPCCount: 100
+  activeNPCCount: 0
   allNPCs: []
   activeNPCs: []
 --- !u!4 &1907374924

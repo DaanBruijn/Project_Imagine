@@ -75,6 +75,7 @@ public class EventRunner : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         NPCDialogue[] npcs = FindObjectsOfType<NPCDialogue>();
         allNPCs.AddRange(npcs);
+        activeNPCCount = (int)allNPCs.Count / 2;
 
         SelectRandomActiveNPCs();
     }
