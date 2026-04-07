@@ -462,7 +462,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840c93a9d0429541b28c6a1e15a388f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 0}
+  _sounds: []
+  _workingSound: {fileID: 0}
+  _ticket: {fileID: 0}
   isWorkingMachine: 0
+--- !u!1 &1118455137635483254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7029857942561104193}
+  - component: {fileID: 3215139243274467696}
+  m_Layer: 0
+  m_Name: StalkerLocation (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7029857942561104193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118455137635483254}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000021855698, y: -0.00000003774895, z: 8.250297e-16, w: 1}
+  m_LocalPosition: {x: 0.372, y: -0, z: 0.458}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7572012623905729398}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3215139243274467696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118455137635483254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d61c909305b6664db10e9da1e811e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2156372441265262208
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +565,9 @@ Transform:
   - {fileID: 3245073738485570599}
   - {fileID: 554222973788146350}
   - {fileID: 6592642793753667878}
+  - {fileID: 2080436012541364251}
   - {fileID: 5255427773519941721}
+  - {fileID: 7029857942561104193}
   - {fileID: 8800425257187335071}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -639,7 +689,7 @@ Transform:
   m_GameObject: {fileID: 2174280684865039267}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.448, y: -0, z: 0.4435}
+  m_LocalPosition: {x: 0.448, y: -0, z: 0.444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1648,7 +1698,7 @@ Transform:
   m_GameObject: {fileID: 5076104235584149558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.525, y: -0, z: 0.4435}
+  m_LocalPosition: {x: -0.525, y: -0, z: 0.446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2497,6 +2547,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9068616341358493263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2080436012541364251}
+  - component: {fileID: 5590990910295897255}
+  m_Layer: 0
+  m_Name: StalkerLocation (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2080436012541364251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068616341358493263}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000021855698, y: -0.00000003774895, z: 8.250297e-16, w: 1}
+  m_LocalPosition: {x: -0.43, y: 0, z: 0.441}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7572012623905729398}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5590990910295897255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068616341358493263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d61c909305b6664db10e9da1e811e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9220908430683839963
 GameObject:
   m_ObjectHideFlags: 0

@@ -680,6 +680,7 @@ Transform:
   - {fileID: 5522222255935119573}
   - {fileID: 347401843949451066}
   - {fileID: 6297953026634589866}
+  - {fileID: 8873803851700847820}
   - {fileID: 6876585179649236453}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3742,6 +3743,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3858216705088102611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8873803851700847820}
+  - component: {fileID: 2262442099941450653}
+  m_Layer: 0
+  m_Name: StalkerLocation (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8873803851700847820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858216705088102611}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000021855698, y: -0.00000003774895, z: 8.250297e-16, w: 1}
+  m_LocalPosition: {x: 0.0499, y: 0, z: 0.2266}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3121983009151415848}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2262442099941450653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858216705088102611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d61c909305b6664db10e9da1e811e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3971616423400145077
 GameObject:
   m_ObjectHideFlags: 0
@@ -6125,7 +6170,7 @@ Transform:
   m_GameObject: {fileID: 7594421011363086550}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000021855698, y: -0.00000003774895, z: 8.250297e-16, w: 1}
-  m_LocalPosition: {x: -0.0004, y: 0, z: 0.2266}
+  m_LocalPosition: {x: -0.0078, y: 0, z: 0.3117}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -384,6 +384,7 @@ Transform:
   - {fileID: 3245073738485570599}
   - {fileID: 554222973788146350}
   - {fileID: 6592642793753667878}
+  - {fileID: 7455642636403363375}
   - {fileID: 5255427773519941721}
   - {fileID: 2541833603092588423}
   m_Father: {fileID: 0}
@@ -506,7 +507,7 @@ Transform:
   m_GameObject: {fileID: 2174280684865039267}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.448, y: -0, z: 0.4435}
+  m_LocalPosition: {x: 0.448, y: -0, z: 0.444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1425,6 +1426,50 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.5}
   m_Size: {x: 3, y: 2, z: 1}
   m_FadeFactor: 1
+--- !u!1 &4150280442120880591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7455642636403363375}
+  - component: {fileID: 2045628246731579895}
+  m_Layer: 0
+  m_Name: StalkerLocation (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7455642636403363375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4150280442120880591}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000021855698, y: -0.00000003774895, z: 8.250297e-16, w: 1}
+  m_LocalPosition: {x: -0.4522, y: -0.0523, z: 0.4562}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7572012623905729398}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045628246731579895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4150280442120880591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d61c909305b6664db10e9da1e811e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4224967153804372576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,7 +1974,7 @@ Transform:
   m_GameObject: {fileID: 5076104235584149558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.525, y: -0, z: 0.4435}
+  m_LocalPosition: {x: -0.525, y: -0, z: 0.446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

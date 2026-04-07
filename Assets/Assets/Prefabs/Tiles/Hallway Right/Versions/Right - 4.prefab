@@ -491,6 +491,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840c93a9d0429541b28c6a1e15a388f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 0}
+  _sounds: []
+  _workingSound: {fileID: 0}
+  _ticket: {fileID: 0}
   isWorkingMachine: 0
 --- !u!1 &3084083987662745741
 GameObject:
@@ -517,7 +521,7 @@ Transform:
   m_GameObject: {fileID: 3084083987662745741}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.2154, y: 0, z: 0.3953}
+  m_LocalPosition: {x: 0.215, y: -0, z: 0.395}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
