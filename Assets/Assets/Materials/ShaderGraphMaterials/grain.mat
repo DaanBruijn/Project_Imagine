@@ -63,7 +63,7 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
-    - _grain: 0.8095717
+    - _grain: 0.8630592
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
