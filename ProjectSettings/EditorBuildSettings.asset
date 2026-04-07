@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalScenes/MainMenuScene.unity
     guid: 542e2ec661102f749abb2b5b1252f4d0
   - enabled: 1
-    path: Assets/IntroCutscene.unity
+    path: Assets/Scenes/FinalScenes/IntroCutscene.unity
     guid: 8eca107471e6b734bbb333035799a9ea
   - enabled: 1
-    path: Assets/OutroCutscene.unity
+    path: Assets/Scenes/FinalScenes/OutroCutscene.unity
     guid: 01072ffcd98d45844a23b8d3a66de202
   - enabled: 1
     path: Assets/Scenes/FinalScenes/MetroScene.unity

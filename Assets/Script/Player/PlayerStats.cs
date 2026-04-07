@@ -1,5 +1,8 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // - Script for handling PlayerStat Data (Stress, Stamina, ETC.)
 // - Daniel Bruijn
@@ -11,10 +14,19 @@ public class PlayerStats : MonoBehaviour
     public float stress = 0f;
     public float maxStress = 100f;
 
+    [Header("UI")] 
+    public Image fadeImage;
+    public float fadeDuration = 6f;
+    
+    [Header("Player")]
+    public PlayerController playerController;
+
     void Start()
     {
         // - Makes sure that Stress is 0 at the start.
         stress = 0f;
+        // - Make sure PlayerController is Active
+        playerController.enabled = true;
     }
 
     void Update()
@@ -29,11 +41,8 @@ public class PlayerStats : MonoBehaviour
         stress = Mathf.Clamp(stress, 0, maxStress);
 
         Debug.Log("Stress: " + stress);
-
-        // - Optional: update UI here - Visual Que, Vignette Color grading etc.
     }
     
-    // - Optional: Use objects to reduce stress??
     public void ReduceStress(float amount)
     {
         stress -= amount;
@@ -44,13 +53,29 @@ public class PlayerStats : MonoBehaviour
     {
         if (stress >= maxStress)
         {
-            Camera.main.AddComponent<Rigidbody>();
-            Camera.main.AddComponent<Collider>();
-            Camera.main.transform.parent = Camera.main.transform;
-
-            Debug.Log("MaxStressReached - No event yet");
+            Rigidbody rb = Camera.main.AddComponent<Rigidbody>();
+            rb.useGravity = true;
+            rb.isKinematic = false;
+            Camera.main.AddComponent<BoxCollider>();
+            
+            StartCoroutine(FadeAndLoadCO());
+            playerController.enabled = false;
         }
     }
+    
+    IEnumerator FadeAndLoadCO()
+    {
+        float time = 0f;
+        Color color = fadeImage.color;
 
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            color.a = Mathf.Lerp(0, 1, time / fadeDuration);
+            fadeImage.color = color;
+            yield return null;
+        }
 
+        SceneManager.LoadScene("MainMenuScene");
+    }
 }
