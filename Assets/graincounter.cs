@@ -13,7 +13,7 @@ public class graincounter : MonoBehaviour
 
     private void Update()
     {
-        _material.SetFloat("_grain",0.9f - (0.003f * playerStats.stress));
-        _whiteNOise.volume = playerStats.stress * 0.01f;
+        _material.SetFloat("_grain",0.9f - (0.001f * playerStats.stress));
+        _whiteNOise.volume = playerStats.stress * 0.003f;
     }
 }

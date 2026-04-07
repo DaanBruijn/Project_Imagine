@@ -45,6 +45,7 @@ public class PlayerStats : MonoBehaviour
         if (stress >= maxStress)
         {
             Camera.main.AddComponent<Rigidbody>();
+            Camera.main.AddComponent<Collider>();
             Camera.main.transform.parent = Camera.main.transform;
 
             Debug.Log("MaxStressReached - No event yet");
