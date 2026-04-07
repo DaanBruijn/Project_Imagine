@@ -46,22 +46,7 @@ public class MapManager : MonoBehaviour
     }
     private void Update()
     {
-        if (_generate.WasPressedThisFrame())
-        {
-            _currentTiles = 0;
-            for (int i = 0; i < spawnedTiles.Count; i++) 
-            {
-                Destroy(spawnedTiles[i]);
-            }
-            spawnedTiles.Clear();
-            _endingtiles.Clear();
-            currentWave.Clear();
-            Debug.Log(spawnedTiles.Count);
-            if (spawnedTiles.Count == 0)
-            {
-                GenerateMapTwo();
-            }
-        }
+
     }
     private void GenerateMap()
     {
